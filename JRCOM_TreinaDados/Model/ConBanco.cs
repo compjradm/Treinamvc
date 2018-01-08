@@ -15,11 +15,15 @@ namespace JRCOM_TreinaDados.Model
         private string senha;
         private MySqlConnection conexao;
 
-        public ConBanco(string bd, string usr, string pss, string servidor = "localhost"){
-          PreparaConexao(bd, usr, pss, servidor);
+        public ConBanco(string bd, string usr, string pss, string svr = "localhost"){
+          PreparaConexao(bd, usr, pss, svr);
+            servidor = svr;
+            bancoDados = bd;
+            usuario = usr;
+            senha = pss;
         }
-        private void PreparaConexao(string bd, string usr, string pss, string servidor = "localhost") {
-          string connectionString = "SERVER=" + servidor + ";" + "DATABASE=" + bd + ";" + "UID=" + usr + ";" + "PASSWORD=" + pss + ";";
+        private void PreparaConexao(string bd, string usr, string pss, string svr = "localhost") {
+          string connectionString = "SERVER=" + svr + ";" + "DATABASE=" + bd + ";" + "UID=" + usr + ";" + "PASSWORD=" + pss + ";";
           conexao = new MySqlConnection(connectionString);
         }
         private bool AbreConexao(){
@@ -39,7 +43,7 @@ namespace JRCOM_TreinaDados.Model
                 return false;
             }
         }
-        private bool FechaConexao()){
+        private bool FechaConexao(){
             try{
                 conexao.Close();
                 return true;
@@ -49,7 +53,7 @@ namespace JRCOM_TreinaDados.Model
                 return false;
             }
         }
-        public void InsereLinha(string tabela) {
+        public void InsereLinha(string tabela, List<string> valores) {
             string query = "INSERT INTO " + tabela + " (name, age) VALUES('John Smith', '33')";
             if (this.OpenConnection() == true){
                 MySqlCommand cmd = new MySqlCommand(query, conexao);
@@ -57,7 +61,7 @@ namespace JRCOM_TreinaDados.Model
                 this.CloseConnection();
             }
         }
-        public void UpdateLine(string tabela){
+        public void UpdateLine(string tabela, List<string> valores){
             string query = "UPDATE "+ tabela + " SET name='Joe', age='22' WHERE name='John Smith'";
             if (this.AbreConexao() == true){
                 MySqlCommand cmd = new MySqlCommand();
@@ -67,15 +71,15 @@ namespace JRCOM_TreinaDados.Model
                 this.FechaConexao();
             }
         }
-        public void ApagaLinha(string tabela){
-            string query = "DELETE FROM tableinfo WHERE name='John Smith'";
+        public void ApagaLinha(string tabela, List<string> valores){
+            string query = "DELETE FROM " + tabela + " WHERE name='John Smith'";
             if (this.AbreConexao() == true){
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlCommand cmd = new MySqlCommand(query, conexao);
                 cmd.ExecuteNonQuery();
                 this.FechaConexao();
             }
         }
-        public List< string >[] Select(string tabela){
+        public List< string >[] Select(string tabela, List<string> valores){
             string query = "SELECT * FROM " + tabela;
             List< string >[] list = new List< string >[3];
             list[0] = new List< string >();

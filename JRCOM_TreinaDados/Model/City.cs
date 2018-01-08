@@ -29,11 +29,24 @@ namespace JRCOM_TreinaDados.Model{
 			get {return country_id;}
 			set {country_id = value;}
 		}
-		public datetime ultimaAtualizacao{
+        public DateTime ultimaAtualizacao{
 			get {return last_update;}
 			set {last_update = value;}
 		}
-		public List<string> ToStringLista(){
+        public override string ToString()
+        {
+            string expressao = "city='" + city + "',country_id='" + country_id + ",last_update=" + last_update.ToString();
+            return expressao;
+        }
+        public List<string> ToStringTabelaLista()
+        {
+            List<string> val = new List<string>();
+            val.Add("city");
+            val.Add("country_id");
+            val.Add("last_update");
+            return val;
+        }
+		public List<string> ToStringValoresLista(){
 			List<string> lista = new List<string>();
 			lista.Add(Cidade);
 			lista.Add(IDEstado.ToString());

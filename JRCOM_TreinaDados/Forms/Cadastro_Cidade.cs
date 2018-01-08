@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JRCOM_TreinaDados.Model;
 
 namespace JRCOM_TreinaDados
 {
     public partial class Cadastro_Cidade : Form
     {
+        ConBanco BD = new ConBanco();
         public Cadastro_Cidade()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
