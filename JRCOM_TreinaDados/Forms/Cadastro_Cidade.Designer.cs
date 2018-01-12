@@ -28,110 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.BtnUltimo = new System.Windows.Forms.Button();
+            this.BtnProx = new System.Windows.Forms.Button();
+            this.BtnAnterior = new System.Windows.Forms.Button();
+            this.BtnPrimeiro = new System.Windows.Forms.Button();
+            this.BtnApaga = new System.Windows.Forms.Button();
+            this.BtnSalva = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.TxtCidade = new System.Windows.Forms.TextBox();
+            this.TxtEstado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.LblUltatualiza = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button7
+            // BtnUltimo
             // 
-            this.button7.Location = new System.Drawing.Point(319, 220);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 36;
-            this.button7.Text = "Último";
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnUltimo.Location = new System.Drawing.Point(319, 220);
+            this.BtnUltimo.Name = "BtnUltimo";
+            this.BtnUltimo.Size = new System.Drawing.Size(75, 23);
+            this.BtnUltimo.TabIndex = 36;
+            this.BtnUltimo.Text = "Último";
+            this.BtnUltimo.UseVisualStyleBackColor = true;
+            this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
-            // button6
+            // BtnProx
             // 
-            this.button6.Location = new System.Drawing.Point(319, 191);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 35;
-            this.button6.Text = "Próximo";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnProx.Location = new System.Drawing.Point(319, 191);
+            this.BtnProx.Name = "BtnProx";
+            this.BtnProx.Size = new System.Drawing.Size(75, 23);
+            this.BtnProx.TabIndex = 35;
+            this.BtnProx.Text = "Próximo";
+            this.BtnProx.UseVisualStyleBackColor = true;
+            this.BtnProx.Click += new System.EventHandler(this.BtnProx_Click);
             // 
-            // button5
+            // BtnAnterior
             // 
-            this.button5.Location = new System.Drawing.Point(319, 162);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 34;
-            this.button5.Text = "Anterior";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnAnterior.Location = new System.Drawing.Point(319, 162);
+            this.BtnAnterior.Name = "BtnAnterior";
+            this.BtnAnterior.Size = new System.Drawing.Size(75, 23);
+            this.BtnAnterior.TabIndex = 34;
+            this.BtnAnterior.Text = "Anterior";
+            this.BtnAnterior.UseVisualStyleBackColor = true;
+            this.BtnAnterior.Click += new System.EventHandler(this.BtnAnterior_Click);
             // 
-            // button4
+            // BtnPrimeiro
             // 
-            this.button4.Location = new System.Drawing.Point(319, 133);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "Primeiro";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnPrimeiro.Location = new System.Drawing.Point(319, 133);
+            this.BtnPrimeiro.Name = "BtnPrimeiro";
+            this.BtnPrimeiro.Size = new System.Drawing.Size(75, 23);
+            this.BtnPrimeiro.TabIndex = 33;
+            this.BtnPrimeiro.Text = "Primeiro";
+            this.BtnPrimeiro.UseVisualStyleBackColor = true;
+            this.BtnPrimeiro.Click += new System.EventHandler(this.BtnPrimeiro_Click);
             // 
-            // button3
+            // BtnApaga
             // 
-            this.button3.Location = new System.Drawing.Point(319, 104);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Remove";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnApaga.Location = new System.Drawing.Point(319, 104);
+            this.BtnApaga.Name = "BtnApaga";
+            this.BtnApaga.Size = new System.Drawing.Size(75, 23);
+            this.BtnApaga.TabIndex = 32;
+            this.BtnApaga.Text = "Remove";
+            this.BtnApaga.UseVisualStyleBackColor = true;
+            this.BtnApaga.Click += new System.EventHandler(this.BtnApaga_Click);
             // 
-            // button2
+            // BtnSalva
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(319, 75);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Salva";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnSalva.Enabled = false;
+            this.BtnSalva.Location = new System.Drawing.Point(319, 75);
+            this.BtnSalva.Name = "BtnSalva";
+            this.BtnSalva.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalva.TabIndex = 31;
+            this.BtnSalva.Text = "Salva";
+            this.BtnSalva.UseVisualStyleBackColor = true;
+            this.BtnSalva.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // BtnNovo
             // 
-            this.button1.Location = new System.Drawing.Point(319, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnNovo.Location = new System.Drawing.Point(319, 46);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(75, 23);
+            this.BtnNovo.TabIndex = 30;
+            this.BtnNovo.Text = "Novo";
+            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // TxtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 37;
+            this.TxtId.Location = new System.Drawing.Point(85, 34);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.ReadOnly = true;
+            this.TxtId.Size = new System.Drawing.Size(100, 20);
+            this.TxtId.TabIndex = 37;
             // 
-            // textBox2
+            // TxtCidade
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 38;
+            this.TxtCidade.Location = new System.Drawing.Point(85, 60);
+            this.TxtCidade.Name = "TxtCidade";
+            this.TxtCidade.Size = new System.Drawing.Size(100, 20);
+            this.TxtCidade.TabIndex = 38;
             // 
-            // textBox3
+            // TxtEstado
             // 
-            this.textBox3.Location = new System.Drawing.Point(85, 86);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 39;
+            this.TxtEstado.Location = new System.Drawing.Point(85, 86);
+            this.TxtEstado.Name = "TxtEstado";
+            this.TxtEstado.Size = new System.Drawing.Size(100, 20);
+            this.TxtEstado.TabIndex = 39;
             // 
             // label1
             // 
@@ -169,14 +175,14 @@
             this.label4.TabIndex = 43;
             this.label4.Text = "Estado";
             // 
-            // label5
+            // LblUltatualiza
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(123, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "label5";
+            this.LblUltatualiza.AutoSize = true;
+            this.LblUltatualiza.Location = new System.Drawing.Point(123, 114);
+            this.LblUltatualiza.Name = "LblUltatualiza";
+            this.LblUltatualiza.Size = new System.Drawing.Size(10, 13);
+            this.LblUltatualiza.TabIndex = 44;
+            this.LblUltatualiza.Text = "-";
             // 
             // button8
             // 
@@ -193,23 +199,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 275);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.LblUltatualiza);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TxtEstado);
+            this.Controls.Add(this.TxtCidade);
+            this.Controls.Add(this.TxtId);
+            this.Controls.Add(this.BtnUltimo);
+            this.Controls.Add(this.BtnProx);
+            this.Controls.Add(this.BtnAnterior);
+            this.Controls.Add(this.BtnPrimeiro);
+            this.Controls.Add(this.BtnApaga);
+            this.Controls.Add(this.BtnSalva);
+            this.Controls.Add(this.BtnNovo);
             this.Name = "Cadastro_Cidade";
-            this.Text = "Cadastro_Cidade";
+            this.Text = "Cadastro de Cidade";
+            this.Load += new System.EventHandler(this.Cadastro_Cidade_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,21 +224,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button BtnUltimo;
+        private System.Windows.Forms.Button BtnProx;
+        private System.Windows.Forms.Button BtnAnterior;
+        private System.Windows.Forms.Button BtnPrimeiro;
+        private System.Windows.Forms.Button BtnApaga;
+        private System.Windows.Forms.Button BtnSalva;
+        private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.TextBox TxtCidade;
+        private System.Windows.Forms.TextBox TxtEstado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblUltatualiza;
         private System.Windows.Forms.Button button8;
     }
 }

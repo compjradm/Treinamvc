@@ -38,13 +38,15 @@ namespace JRCOM_TreinaDados.Model{
             string expressao = "city='" + city + "',country_id='" + country_id + ",last_update=" + last_update.ToString();
             return expressao;
         }
-        public List<string> ToStringTabelaLista()
+        public List<string> ToStringTabelaLista(bool incluiID = false)
         {
             List<string> val = new List<string>();
-            val.Add("city");
-            val.Add("country_id");
-            val.Add("last_update");
-            return val;
+			if (incluiID)
+				val.Add("city_id");
+			val.Add("city");
+			val.Add("country_id");
+			val.Add("last_update");
+			return val;
         }
 		public List<string> ToStringValoresLista(){
 			List<string> lista = new List<string>();
