@@ -136,6 +136,14 @@ namespace JRCOM_TreinaDados.Model
                             list[3].Add(dataReader["last_update"] + "");
                         }
                         break;
+                    case "country":
+                        while (dataReader.Read())
+                        {
+                            list[0].Add(dataReader["country_id"] + "");
+                            list[1].Add(dataReader["country"] + "");
+                            list[2].Add(dataReader["last_update"] + "");
+                        }
+                        break;
                 }
                 dataReader.Close();
                 this.FechaConexao();

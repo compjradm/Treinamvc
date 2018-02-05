@@ -46,11 +46,11 @@ namespace JRCOM_TreinaDados
             DadosCidade.Cidade = TxtCidade.Text;
             DadosCidade.IDEstado = IdEstado;
             if (novo) {
-                BD.InsereLinha("city", DadosCidade.ToStringTabelaLista(), DadosCidade.ToStringValoresLista());
+                BD.InsereLinha("city", City.ToStringTabelaLista(), DadosCidade.ToStringValoresLista());
             }
             else
             {
-                BD.UpdateLine();
+                BD.UpdateLine("city",City.ToStringTabelaLista(), DadosCidade.ToStringValoresLista(),"id_city="+reg);
             }
             novo = false;
         }
@@ -61,28 +61,32 @@ namespace JRCOM_TreinaDados
                 MessageBox.Show("Nenhum registro selecionado para exclusão!");
             else
             {
-                BD.ApagaLinha();
+                BD.ApagaLinha("city","id_city="+reg);
             }
         }
 
         private void BtnPrimeiro_Click(object sender, EventArgs e)
         {
-            BD.Select();
+            List<string>[] dados;
+            dados = BD.Select("city",City.ToStringTabelaLista(true), "id_city=1");
         }
 
         private void BtnAnterior_Click(object sender, EventArgs e)
         {
-            BD.Select();
+            List<string>[] dados;
+            dados = BD.Select("city", City.ToStringTabelaLista(true), "id_city=1");
         }
 
         private void BtnUltimo_Click(object sender, EventArgs e)
         {
-            BD.Select();
+            List<string>[] dados;
+            dados = BD.Select("city", City.ToStringTabelaLista(true), "id_city=1");
         }
 
         private void BtnProx_Click(object sender, EventArgs e)
         {
-            BD.Select();
+            List<string>[] dados;
+            dados = BD.Select("city", City.ToStringTabelaLista(true), "id_city=1");
         }
     }
 }

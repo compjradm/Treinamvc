@@ -93,5 +93,11 @@ namespace JRCOM_TreinaDados
         {
 
         }
+
+        private void betaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmImportaCsv excel = new frmImportaCsv();
+            excel.Show();
+        }
     }
 }

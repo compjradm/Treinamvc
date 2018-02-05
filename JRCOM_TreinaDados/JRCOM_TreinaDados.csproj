@@ -148,6 +148,13 @@
       <DependentUpon>Pagamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ConBanco.cs" />
+    <Compile Include="Forms\ImportaCsv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportaCsv.Designer.cs">
+      <DependentUpon>ImportaCsv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Country.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CadastroCliente.resx">
@@ -188,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Pagamentos.resx">
       <DependentUpon>Pagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportaCsv.resx">
+      <DependentUpon>ImportaCsv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
